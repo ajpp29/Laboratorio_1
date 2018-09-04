@@ -2,9 +2,9 @@ package com.example.angel.laboratorio1;
 
 public class Cancion {
 
-    private string sNombre;
+    private String sNombre;
     private int iDuración;
-    private string sAutor;
+    private String sAutor;
 
     public Cancion()
     {
@@ -13,14 +13,14 @@ public class Cancion {
         sAutor=null;
     }
 
-    public Cancion(string Nombre,int Duracion, string Autor)
+    public Cancion(String Nombre,int Duracion, String Autor)
     {
         sNombre=Nombre;
         iDuración=Duracion;
         sAutor=Autor;
     }
 
-    public string getsAutor() {
+    public String getsAutor() {
         return sAutor;
     }
 
@@ -28,7 +28,7 @@ public class Cancion {
         return iDuración;
     }
 
-    public string getsNombre() {
+    public String getsNombre() {
         return sNombre;
     }
 }
