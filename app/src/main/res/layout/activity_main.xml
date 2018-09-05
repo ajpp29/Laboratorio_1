@@ -7,4 +7,25 @@
     tools:context=".MainActivity"
     tools:layout_editor_absoluteY="25dp">
 
+    <TextView
+        android:id="@+id/tvTituloInicio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SPOTIFY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
+
+    <Button
+        android:id="@+id/btnReproduccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lista Reproducción"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
 </android.support.constraint.ConstraintLayout>
