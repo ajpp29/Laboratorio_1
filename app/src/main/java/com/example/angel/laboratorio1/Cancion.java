@@ -3,20 +3,20 @@ package com.example.angel.laboratorio1;
 public class Cancion {
 
     private String sNombre;
-    private int iDuración;
+    private double dDuración;
     private String sAutor;
 
     public Cancion()
     {
         sNombre=null;
-        iDuración=0;
+        dDuración=0;
         sAutor=null;
     }
 
-    public Cancion(String Nombre,int Duracion, String Autor)
+    public Cancion(String Nombre,double Duracion, String Autor)
     {
         sNombre=Nombre;
-        iDuración=Duracion;
+        dDuración=Duracion;
         sAutor=Autor;
     }
 
@@ -24,8 +24,8 @@ public class Cancion {
         return sAutor;
     }
 
-    public int getiDuración() {
-        return iDuración;
+    public double getiDuración() {
+        return dDuración;
     }
 
     public String getsNombre() {
