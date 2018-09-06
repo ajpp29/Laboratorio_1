@@ -28,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btnReproductor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
+                
                 lvReproductor.setAdapter(adaptador);
             }
         });
