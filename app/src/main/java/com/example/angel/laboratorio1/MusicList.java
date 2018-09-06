@@ -2,6 +2,7 @@ package com.example.angel.laboratorio1;
 
 
 import android.support.v7.util.SortedList;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -33,11 +34,11 @@ public class MusicList {
         cancion8=new Cancion("lie to me",2.59,"Steve Aoki,Ina Wroldsen");
         cancion9=new Cancion("ocean",3.36,"Martin Garrix,Khalid");
         cancion10=new Cancion("only you",3.09,"Cheat Codes,Little Mix");
-        //IniciarReproductor();
+        IniciarReproductor();
     }
 
     public void IniciarReproductor(){
-        LinkedList<Cancion> ListaReproduccion= new LinkedList<Cancion>();
+        ListaReproduccion= new LinkedList<Cancion>();
         ListaReproduccion.add(cancion1);
         ListaReproduccion.add(cancion2);
         ListaReproduccion.add(cancion3);
@@ -64,5 +65,30 @@ public class MusicList {
         list.add(cancion10);
 
         return list;
+    }
+
+    public String prueba (String x){
+        if(x=="hola")
+            x="pastel";
+        return x;
+    }
+
+    public ArrayList<Cancion> DevolverListaBusqueda(String cancionbuscada) {
+        int icontador = 0;
+
+        ArrayList<Cancion> list = new ArrayList<Cancion>();
+
+        for(int i =0;i<10;++i){
+
+            if(ListaReproduccion.get(i).getsNombre().equals(cancionbuscada)){
+                list.add(ListaReproduccion.get(i));
+                ++icontador;
+            }
+        }
+
+        if(icontador==0)
+            return null;
+        else
+            return list;
     }
 }

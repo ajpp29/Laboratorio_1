@@ -45,9 +45,9 @@ public class Adaptador extends BaseAdapter{
         TextView tvDuracion= (TextView) convertView.findViewById(R.id.tvDuracion);
         TextView tvAutor = (TextView) convertView.findViewById(R.id.tvAutor);
 
-        tvTitulo.setText(cancion.getsNombre());
-        tvDuracion.setText(String.valueOf(cancion.getiDuración()));
-        tvAutor.setText(cancion.getsAutor());
+        tvTitulo.setText("TITULO: "+cancion.getsNombre());
+        tvDuracion.setText("DURACIÓN: "+String.valueOf(cancion.getiDuración()));
+        tvAutor.setText("ARTISTA: "+cancion.getsAutor());
 
         return convertView;
     }
