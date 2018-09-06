@@ -11,6 +11,9 @@ import java.util.List;
 public class MusicList {
 
     public LinkedList<Cancion> ListaReproduccion;
+    public LinkedList<Cancion> Playlist;
+
+    private int icancionesplaylist;
 
     private Cancion cancion1;
     private Cancion cancion2;
@@ -24,6 +27,7 @@ public class MusicList {
     private Cancion cancion10;
 
     public MusicList(){
+        icancionesplaylist=0;
         cancion1=new Cancion("animals",5.04,"Martin Garrix");
         cancion2=new Cancion("all falls down",3.19,"Alan Walker,Noah Cyrus");
         cancion3=new Cancion("born to be yours",3.13,"Kygo,Imagine Dragons");
@@ -39,6 +43,7 @@ public class MusicList {
 
     public void IniciarReproductor(){
         ListaReproduccion= new LinkedList<Cancion>();
+        Playlist= new LinkedList<Cancion>();
         ListaReproduccion.add(cancion1);
         ListaReproduccion.add(cancion2);
         ListaReproduccion.add(cancion3);
@@ -67,11 +72,6 @@ public class MusicList {
         return list;
     }
 
-    public String prueba (String x){
-        if(x=="hola")
-            x="pastel";
-        return x;
-    }
 
     public ArrayList<Cancion> DevolverListaBusqueda(String cancionbuscada) {
         int icontador = 0;
@@ -90,5 +90,41 @@ public class MusicList {
             return null;
         else
             return list;
+    }
+
+
+    public boolean AgregarPlayList(String sCancion){
+
+        boolean agregado=false;
+        boolean encontrado=false;
+
+        for(int i =0;i<icancionesplaylist;++i){
+            if(Playlist.get(i).getsNombre().equals(sCancion)){
+                encontrado=true;
+                agregado=false;
+            }
+        }
+
+        for(int i =0;i<10;++i){
+            if(ListaReproduccion.get(i).getsNombre().equals(sCancion) && encontrado!=true){
+
+                Playlist.add(ListaReproduccion.get(i));
+                agregado=true;
+                ++icancionesplaylist;
+            }
+        }
+        return agregado;
+    }
+
+    public ArrayList<Cancion> DevolverPlayList(){
+
+        ArrayList<Cancion> list = new ArrayList<Cancion>();
+
+        for(int i =0;i<icancionesplaylist;++i){
+
+            list.add(Playlist.get(i));
+        }
+
+        return list;
     }
 }
