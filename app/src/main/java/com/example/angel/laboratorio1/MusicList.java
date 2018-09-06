@@ -3,7 +3,9 @@ package com.example.angel.laboratorio1;
 
 import android.support.v7.util.SortedList;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 
 public class MusicList {
 
@@ -46,5 +48,21 @@ public class MusicList {
         ListaReproduccion.add(cancion8);
         ListaReproduccion.add(cancion9);
         ListaReproduccion.add(cancion10);
+    }
+
+    public ArrayList<Cancion> DevolverLista(){
+        ArrayList<Cancion> list = new ArrayList<Cancion>();
+        list.add(cancion1);
+        list.add(cancion2);
+        list.add(cancion3);
+        list.add(cancion4);
+        list.add(cancion5);
+        list.add(cancion6);
+        list.add(cancion7);
+        list.add(cancion8);
+        list.add(cancion9);
+        list.add(cancion10);
+
+        return list;
     }
 }
